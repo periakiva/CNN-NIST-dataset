@@ -8,7 +8,7 @@ t = cputime;
 encoding = 'vggm128-fc7' ;
 augmentation = false ;
 encoder = loadEncoder(encoding) ;
-pos.names = getImageSet('data/myImages', augmentation) ;
+pos.names = getImageSet('/path/to/matlab/data/myImages', augmentation) ;
 if numel(pos.names) == 0, error('Please add some images to data/myImages before running this exercise') ; end
 
 pos.descriptors = encodeImage(encoder, pos.names, ['data/cache_' encoding]) ;
